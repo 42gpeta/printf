@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/21 18:58:44 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/21 19:02:26 by gpeta            ###   ########.fr        #
+#    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
+#    Updated: 2022/12/24 16:45:00 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,20 +14,20 @@
 ##	ARGUMENTS
 
 NAME =			libftprintf.a
-CC = 			gcc
+CC = 			cc
 CFLAGS = 		-Wall -Wextra -Werror
-NORMINETTE =	norminette -R CheckForbiddenSourceHeader *.c
+NORMINETTE =	norminette -R CheckForbiddenSourceHeader *.c *.h
 
 ###############################################
 ##	SOURCES
 
-SRC = ##
+SRC = 
 
 OBJ = $(SRC:.c=.o)
 
-BONUS = ##
+# BONUS = 
 
-BONUS_OBJ = $(BONUS:.c=.o)
+# BONUS_OBJ = $(BONUS:.c=.o)
 
 ###############################################
 ##	RULES
@@ -40,18 +40,39 @@ all : $(NAME)
 $(NAME) : $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
-bonus : $(BONUS_OBJ)
-	ar rc $(NAME) $(BONUS_OBJ)
+# bonus : $(OBJ) $(BONUS_OBJ)
+# 	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
 
 clean :
-	rm -rf $(OBJ) $(BONUS_OBJ)
+	rm -rf $(OBJ)
+#	rm -rf $(OBJ) $(BONUS_OBJ)
 
 fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
 
-norminette :
-	$(NORMINETTE)
-
 .PHONY : all clean fclean re
+
+
+###############################################
+##	NORMINETTE : COLORMINETTE (@VEGRET)
+
+RED          =    \033[0;91m
+LIGHT_RED    =    \033[0;31m
+GREEN        =    \033[0;92m
+norminette :
+	@$(NORMINETTE) | grep -v Norme | awk '{\
+	if ($$NF == "OK!") { \
+	    print "$(GREEN)"$$0"$(END)" \
+	} else if ($$NF == "Error!") { \
+	    print "$(RED)$(BOLD)"$$0"$(END)" \
+	} else if ($$1 == "Error:") { \
+	    print "$(LIGHT_RED)"$$0"$(END)" \
+	} else { print }}'
+
+###############################################
+##	NORMINETTE : verif norminette (@VEGRET)
+
+norm_verif :
+	nm $(NAME)
