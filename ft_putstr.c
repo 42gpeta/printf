@@ -6,14 +6,21 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:13:00 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/24 18:24:10 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/26 15:52:34 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_putstr(char *s)
+int	ft_putstr(char *s)
 {
+	int	count;
+
+	count = 0;
 	while (*s)
+	{
 		ft_putchar(*s++);
+		count++;
+	}
+	return (count);
 }

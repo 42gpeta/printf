@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 19:07:04 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/24 19:30:56 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/26 17:02:25 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,12 @@
 # include <ctype.h>
 # include <unistd.h>
 
-int		ft_printf(const char *, ...);
-void	ft_putchar	(char c);
-// void	ft_puthexa	(char *base, int n, char*); // a voir avec Aya
-void	ft_putnbr	(int n);
-// void	ft_putnbr_u	(unsigned int n);
-void	ft_putstr	(char *s);
-
-// avec pointeur de fonction
-
-void	ft_putnbr_u(void *n); // w/ pointeur de fonction
+// int	ft_printf(const char *, ...);
+int	ft_putchar	(char c);
+int	ft_puthexa	(int n, char c); // a voir avec Aya
+// int	ft_puthexa	(char *base, int n, char c); // a voir avec Aya (char *)
+int	ft_putnbr	(int n);
+int	ft_putnbr_u	(unsigned int n);
+int	ft_putstr	(char *s);
 
 #endif
