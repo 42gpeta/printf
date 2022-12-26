@@ -6,12 +6,17 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:03:18 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/24 19:11:01 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/26 20:28:27 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"
+
 int	ft_printf(const char *, ...)
 {
-	double (*functionlist[4])(double,double) =
-		{addition,soustraction,multiplication,division}
+	va_list	args;
+
+	va_start(args, char);
+
+	va_end(args);
 }

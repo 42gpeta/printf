@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:39:21 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 17:00:12 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/26 17:50:48 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	main(void)
 	int tnbr = -1;
 	int tnbr_u = -1;
 	char tstr[] = "bonjour";
+	int *tp = &tnbr;
 
 	ft_putchar(tchar);
 	ft_putchar('\n');
@@ -34,6 +35,8 @@ int	main(void)
 	ft_putstr(tstr);
 	ft_putchar('\n');
 	printf("%%u : %u\n", -1);
+	printf("%%p : %p\n", tp);
+	
 
 	return (0);
 }
