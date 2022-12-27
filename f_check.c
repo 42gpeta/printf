@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 17:03:46 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 16:33:04 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 17:46:01 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int	f_check(va_list args, char c)
 	else if (c == 'u')
 		len = ft_putnbr_u(va_arg(args, unsigned int));
 	else if (c == 'x')
-		len = ft_puthexa(va_arg(args, int), 'x');
+		len = ft_puthexa(va_arg(args, unsigned int), 'x');
 	else if (c == 'X')
-		len = ft_puthexa(va_arg(args, int), 'X');
+		len = ft_puthexa(va_arg(args, unsigned int), 'X');
 	else if (c == '%')
 		len = ft_putchar('%');
 	va_end(args);

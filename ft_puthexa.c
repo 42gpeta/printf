@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 16:27:50 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 17:45:34 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 // *** VERSION : classique *** 
 
-int	ft_puthexa(int n, char c)
+// erreurs 4 / 6 / 7 = KO
+int	ft_puthexa(unsigned int n, char c)
 {
-	int	count;
+	unsigned int	count;
 	char *base;
 
 	if (c == 'x')
