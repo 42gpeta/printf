@@ -6,17 +6,17 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 19:07:04 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 18:40:24 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 19:06:09 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
-# include <bsd/string.h>
-# include <stdlib.h>
-# include <ctype.h>
+// # include <stdio.h>
+// # include <bsd/string.h>
+// # include <stdlib.h>
+// # include <ctype.h>
 # include <unistd.h>
 # include <stdarg.h>
 

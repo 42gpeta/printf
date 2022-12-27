@@ -6,7 +6,7 @@
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/27 17:26:13 by gpeta            ###   ########.fr        #
+#    Updated: 2022/12/27 19:56:26 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 ##	ARGUMENTS
 
 NAME =			libftprintf.a
+SCD_MAKEFILE =	libft
 CC = 			cc
 CFLAGS = 		-Wall -Wextra -Werror
 NORMINETTE =	norminette -R CheckForbiddenSourceHeader *.c *.h
@@ -37,11 +38,11 @@ OBJ = $(SRC:.c=.o)
 # BONUS_OBJ = $(BONUS:.c=.o)
 
 ###############################################
-##	RULES
+##	RULES ft_printf
 
 all : $(NAME)
 
-%.o : %.c
+%.o : %.c ft_printf.h
 	$(CC) -o $@ -c $^ $(CFLAGS)
 
 $(NAME) : $(OBJ)
@@ -59,7 +60,22 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+###############################################
+##	RULES libft
+
+$(SCD_MAKEFILE) : 
+	make -C $(SCD_MAKEFILE)
+
+clean2 :
+	make -C $(SCD_MAKEFILE) clean
+
+fclean2 : 
+	make -C $(SCD_MAKEFILE) fclean
+
+re2 : fclean2 $(SCD_MAKEFILE)
+
+
+.PHONY : all clean fclean re libft
 
 
 ###############################################
