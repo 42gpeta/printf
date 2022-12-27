@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:39:21 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 16:27:35 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:53:30 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 // main pour CHAR - HEXA - NBR - NBR_U - STR
 int	main(void)
 {
-	char tchar = 'b';
-	int thexa = 156;
-	int tnbr = -1;
-	int tnbr_u = -1;
-	char tstr[] = "bonjour";
-	int *tp = &tnbr;
+	char	tchar = 'b';
+	int		thexa = 156;
+	int		tnbr = -1;
+	int		tnbr_u = -1;
+	char	tstr[] = "bonjour";
+	int		*tp = &tnbr;
 
 	ft_putchar(tchar);
 	ft_putchar('\n');
@@ -36,7 +36,6 @@ int	main(void)
 	ft_putchar('\n');
 	printf("%%u : %u\n", -1);
 	printf("%%p : %p\n", tp);
-	
 
 	return (0);
 }

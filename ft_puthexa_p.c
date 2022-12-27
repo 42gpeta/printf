@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 18:29:47 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:52:27 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,11 @@ int	ft_puthexa_p(void *n)
 
 int	ft_puthexa_u(long unsigned int n)
 {
-	int	count;
+	int		count;
 	char	*base;
 
 	base = "0123456789abcdef";
 	count = 0;
-	
 	if (n >= 0 && n < 16)
 	{
 		ft_putchar(base[n]);
@@ -54,8 +53,6 @@ int	ft_puthexa_u(long unsigned int n)
 	}
 	return (count);
 }
-
-
 
 //	*** VERSION : Aya *** 
 
@@ -86,16 +83,16 @@ int	ft_puthexa_u(long unsigned int n)
 				MAIN
 ************************************* */
 
-// /* int	main(void)
-// {
-// 	int	tnbr = 16;
-// 	int	*ptnbr = NULL /*&tnbr*/;
+/* int	main(void)
+{
+	int	tnbr = 16;
+	int	*ptnbr = NULL;
 
-// 	ft_puthexa_p(ptnbr);
-// 	ft_putchar('\n');
-// 	printf(" pointeur FT : %p\n", ft_puthexa_p(ptnbr));
-// 	printf(" len FT: %d\n", ft_puthexa_p(ptnbr));
-// 	printf("\n PRINTF : %p\n", ptnbr);
+	ft_puthexa_p(ptnbr);
+	ft_putchar('\n');
+	printf(" pointeur FT : %p\n", ft_puthexa_p(ptnbr));
+	printf(" len FT: %d\n", ft_puthexa_p(ptnbr));
+	printf("\n PRINTF : %p\n", ptnbr);
 
-// 	return (0);
-// } */
+	return (0);
+} */

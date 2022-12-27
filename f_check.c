@@ -6,19 +6,17 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 17:03:46 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 17:46:01 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:39:39 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-// int	f_check(char c, int len, ...)
 int	f_check(va_list args, char c)
 {
 	int		len;
 
 	len = 0;
-
 	if (c == 'c')
 		len = ft_putchar(va_arg(args, int));
 	else if (c == 's')
@@ -40,11 +38,3 @@ int	f_check(va_list args, char c)
 	va_end(args);
 	return (len);
 }
-
-// int	main(void)
-// {
-
-// 	f_check('d', 120);
-
-// 	return (0);
-// }

@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:09 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 16:27:55 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:45:51 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,12 @@
 int	ft_putnbr(int n)
 {
 	long	nl;
-	int	count;
-	nl = (long)n;
+	int		count;
 
+	nl = (long)n;
 	count = 0;
 	if (n == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-		count = 11;
-	}
+		return (write(1, "-2147483648", 11));
 	else if (n < 0)
 	{
 		count += write(1, "-", 1);

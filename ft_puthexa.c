@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 18:28:25 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:51:57 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 // *** VERSION : classique *** 
 
-// erreurs 4 / 6 / 7 = KO
 int	ft_puthexa(unsigned int n, char c)
 {
 	unsigned int	count;
-	char *base;
+	char			*base;
 
 	if (c == 'x')
 		base = "0123456789abcdef";
@@ -37,11 +36,6 @@ int	ft_puthexa(unsigned int n, char c)
 	}
 	return (count);
 }
-
-// ************************************************
-// if C == 'x'
-// 	len = put_hexa(va_arg(ap, int), )
-// ************************************************
 
 //	*** VERSION : Aya *** 
 
