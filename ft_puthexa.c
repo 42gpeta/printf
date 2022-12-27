@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 17:45:34 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 18:28:25 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int	ft_puthexa(unsigned int n, char c)
 
 /* int	main(void)
 {
-	int tnbr = 156878;
+	int tnbr = 16;
 
 	// char	bx[16] = "0123456789abcdef";
 	// char	bX[16] = "0123456789ABCDEF";
