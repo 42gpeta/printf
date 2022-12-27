@@ -6,11 +6,11 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:39:21 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 17:50:48 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 16:27:35 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 // main pour CHAR - HEXA - NBR - NBR_U - STR
 int	main(void)

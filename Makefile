@@ -6,7 +6,7 @@
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/24 16:45:00 by gpeta            ###   ########.fr        #
+#    Updated: 2022/12/27 16:32:17 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,14 @@ NORMINETTE =	norminette -R CheckForbiddenSourceHeader *.c *.h
 ###############################################
 ##	SOURCES
 
-SRC = 
+SRC = f_check.c \
+ft_printf.c \
+ft_putchar.c \
+ft_puthexa.c \
+ft_puthexa_p.c \
+ft_putnbr.c \
+ft_putnbr_u.c \
+ft_putstr.c
 
 OBJ = $(SRC:.c=.o)
 

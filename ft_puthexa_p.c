@@ -6,11 +6,11 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 18:54:22 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 16:41:07 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_puthexa_u(long unsigned int n);
 
@@ -18,8 +18,17 @@ int	ft_puthexa_u(long unsigned int n);
 
 int	ft_puthexa_p(void *n)
 {
-	write(1, "0x", 2);
-	ft_puthexa_u((long unsigned int)n);
+	int	count_final;
+
+	count_final = 0;
+	if (!(long unsigned)n)
+		count_final += ft_puthexa_u((long unsigned int)n);
+	else
+	{
+		count_final += write(1, "0x", 2);
+		count_final += ft_puthexa_u((long unsigned int)n);
+	}
+	return (count_final);
 }
 
 int	ft_puthexa_u(long unsigned int n)
@@ -29,7 +38,12 @@ int	ft_puthexa_u(long unsigned int n)
 
 	base = "0123456789abcdef";
 	count = 0;
-	if (n >= 0 && n < 16)
+	if (!n)
+	{
+		write(1, "(nil)", 5);
+		return (count += 5);
+	}
+	else if (n >= 0 && n < 16)
 	{
 		ft_putchar(base[n]);
 		count++;
@@ -73,7 +87,7 @@ int	ft_puthexa_u(long unsigned int n)
 				MAIN
 ************************************* */
 
-int	main(void)
+/* int	main(void)
 {
 	int	tnbr = 78;
 	int	*ptnbr = &tnbr;
@@ -87,4 +101,4 @@ int	main(void)
 	printf("\npointeur de tnbr : %p\n", ptnbr);
 
 	return (0);
-}
+} */

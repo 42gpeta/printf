@@ -6,18 +6,18 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:57 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 19:13:39 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 16:27:50 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 // *** VERSION : classique *** 
 
 int	ft_puthexa(int n, char c)
 {
 	int	count;
-	char *base
+	char *base;
 
 	if (c == 'x')
 		base = "0123456789abcdef";
@@ -71,7 +71,7 @@ int	ft_puthexa(int n, char c)
 				MAIN
 ************************************* */
 
-int	main(void)
+/* int	main(void)
 {
 	int tnbr = 156878;
 
@@ -83,4 +83,4 @@ int	main(void)
 	printf("%x\n", ft_puthexa(tnbr, 'X'));
 
 	return (0);
-}
+} */

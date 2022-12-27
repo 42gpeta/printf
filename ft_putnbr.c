@@ -6,11 +6,11 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:12:09 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 16:55:20 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 16:27:55 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(int n)
 {

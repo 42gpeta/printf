@@ -6,19 +6,19 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 17:03:46 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/26 20:23:55 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/27 16:33:04 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 // int	f_check(char c, int len, ...)
-int	f_check(char c, ...)
+int	f_check(va_list args, char c)
 {
-	int		len; // a supprimer
+	int		len;
 
-	va_start(args, c);
-	len = 0; // a supprimer
+	len = 0;
+
 	if (c == 'c')
 		len = ft_putchar(va_arg(args, int));
 	else if (c == 's')
@@ -36,15 +36,15 @@ int	f_check(char c, ...)
 	else if (c == 'X')
 		len = ft_puthexa(va_arg(args, int), 'X');
 	else if (c == '%')
-		len = ft_putchar("%");
+		len = ft_putchar('%');
 	va_end(args);
 	return (len);
 }
 
-int	main(void)
-{
+// int	main(void)
+// {
 
-	f_check('d', 120);
+// 	f_check('d', 120);
 
-	return (0);
-}
+// 	return (0);
+// }
