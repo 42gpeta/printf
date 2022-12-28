@@ -6,7 +6,7 @@
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/28 14:48:21 by gpeta            ###   ########.fr        #
+#    Updated: 2022/12/28 16:33:16 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,9 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
+library :
+	ar -t $(NAME)
 
 norminette :
 	$(NORMINETTE)
