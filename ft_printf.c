@@ -6,7 +6,7 @@
 /*   By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 19:03:18 by gpeta             #+#    #+#             */
-/*   Updated: 2022/12/27 18:51:35 by gpeta            ###   ########.fr       */
+/*   Updated: 2022/12/28 18:31:46 by gpeta            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,3 @@ int	ft_printf(const char *str, ...)
 	va_end(args);
 	return (len);
 }
-
-/* *************************************
-				MAIN
-************************************* */
-
-/* int	main(void)
-{
-	int str[2] = {16, 15};
-
-	printf("len ft_printf : %d\n", ft_printf("me  : %p\n", 16));
-	printf("len printf : %d\n", printf("man : %p\n", 16));
-
-	return (0);
-} */
