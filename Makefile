@@ -6,7 +6,7 @@
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/28 16:32:13 by gpeta            ###   ########.fr        #
+#    Updated: 2022/12/28 17:09:07 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ re : fclean all
 
 library :
 	ar -t $(NAME)
+	ar -t $(SCD_MAKEFILE)/$(SCD_MAKEFILE).a
 
 ###############################################
 ##	RULES libft
@@ -86,7 +87,7 @@ fclean2 :
 re2 : fclean2 $(SCD_MAKEFILE)
 
 
-.PHONY : all clean fclean re all2 clean2 fclean2 re2 libft norm_verif
+.PHONY : all clean fclean re library all2 clean2 fclean2 re2 libft norm_verif
 
 
 ###############################################
