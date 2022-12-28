@@ -6,7 +6,7 @@
 #    By: gpeta <gpeta@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:34:10 by gpeta             #+#    #+#              #
-#    Updated: 2022/12/27 19:56:26 by gpeta            ###   ########.fr        #
+#    Updated: 2022/12/28 14:36:45 by gpeta            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,8 @@ ft_putnbr.c \
 ft_putnbr_u.c \
 ft_putstr.c
 
+SRC_H = ft_printf.h
+
 OBJ = $(SRC:.c=.o)
 
 # BONUS = 
@@ -42,11 +44,13 @@ OBJ = $(SRC:.c=.o)
 
 all : $(NAME)
 
-%.o : %.c ft_printf.h
+%.o : %.c
 	$(CC) -o $@ -c $^ $(CFLAGS)
 
 $(NAME) : $(OBJ)
-	ar rc $(NAME) $(OBJ)
+	ar crs $(NAME) $(OBJ) $(SRC_H)
+	make -C $(SCD_MAKEFILE)
+	ar crsv $(NAME) libft/$(SCD_MAKEFILE).a
 
 # bonus : $(OBJ) $(BONUS_OBJ)
 # 	ar rc $(NAME) $(OBJ) $(BONUS_OBJ)
@@ -65,6 +69,10 @@ re : fclean all
 
 $(SCD_MAKEFILE) : 
 	make -C $(SCD_MAKEFILE)
+	ar crsv $(NAME) libft/$(SCD_MAKEFILE).a
+
+addlibft :
+	ar crsv $(NAME) libft/$(SCD_MAKEFILE).a
 
 clean2 :
 	make -C $(SCD_MAKEFILE) clean
@@ -75,7 +83,7 @@ fclean2 :
 re2 : fclean2 $(SCD_MAKEFILE)
 
 
-.PHONY : all clean fclean re libft
+.PHONY : all clean fclean re all2 clean2 fclean2 re2 libft norm_verif
 
 
 ###############################################
@@ -98,4 +106,4 @@ norminette :
 ##	NORMINETTE : verif norminette (@VEGRET)
 
 norm_verif :
-	nm $(NAME)
+	nm $(OBJ)
